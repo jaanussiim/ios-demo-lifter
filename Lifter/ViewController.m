@@ -17,7 +17,7 @@
 #import <MapKit/MapKit.h>
 #import "ViewController.h"
 #import "LiftedAnnotation.h"
-#import "LiftingAnnotationView.h"
+#import "FloatingAnnotationView.h"
 
 @interface ViewController () <MKMapViewDelegate>
 
@@ -50,13 +50,19 @@
 
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    LiftingAnnotationView *annotationView = (LiftingAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:@"identifier"];
+    FloatingAnnotationView *annotationView = (FloatingAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:@"identifier"];
     if (!annotationView) {
         UIImage *pin = [UIImage imageNamed:@"Pin"];
-        annotationView = [[LiftingAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"identifier" image:pin];
+        annotationView = [[FloatingAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"identifier" image:pin];
     }
 
     return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
+    if (newState == MKAnnotationViewDragStateCanceling || newState == MKAnnotationViewDragStateEnding) {
+        [view setDragState:MKAnnotationViewDragStateNone animated:YES];
+    }
 }
 
 @end

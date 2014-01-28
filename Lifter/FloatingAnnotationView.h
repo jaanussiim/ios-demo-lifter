@@ -19,7 +19,7 @@
 
 @protocol MKAnnotation;
 
-@interface LiftingAnnotationView : MKAnnotationView
+@interface FloatingAnnotationView : MKAnnotationView
 
 - (id)initWithAnnotation:(id <MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier image:(UIImage *)image;
 

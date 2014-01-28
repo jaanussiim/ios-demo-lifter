@@ -21,7 +21,7 @@
 		EA90ACD9189169BF009ED308 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA90ACBB189169BF009ED308 /* UIKit.framework */; };
 		EA90ACE1189169BF009ED308 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA90ACDF189169BF009ED308 /* InfoPlist.strings */; };
 		EA90ACE3189169BF009ED308 /* LifterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90ACE2189169BF009ED308 /* LifterTests.m */; };
-		EA90ACEE18916C04009ED308 /* LiftingAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90ACED18916C04009ED308 /* LiftingAnnotationView.m */; };
+		EA90ACEE18916C04009ED308 /* FloatingAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90ACED18916C04009ED308 /* FloatingAnnotationView.m */; };
 		EA90ACF018916C76009ED308 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA90ACEF18916C76009ED308 /* MapKit.framework */; };
 		EA90ACF318916F22009ED308 /* LiftedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90ACF218916F22009ED308 /* LiftedAnnotation.m */; };
 /* End PBXBuildFile section */
@@ -56,8 +56,8 @@
 		EA90ACDE189169BF009ED308 /* LifterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LifterTests-Info.plist"; sourceTree = "<group>"; };
 		EA90ACE0189169BF009ED308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA90ACE2189169BF009ED308 /* LifterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifterTests.m; sourceTree = "<group>"; };
-		EA90ACEC18916C04009ED308 /* LiftingAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiftingAnnotationView.h; sourceTree = "<group>"; };
-		EA90ACED18916C04009ED308 /* LiftingAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiftingAnnotationView.m; sourceTree = "<group>"; };
+		EA90ACEC18916C04009ED308 /* FloatingAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingAnnotationView.h; sourceTree = "<group>"; };
+		EA90ACED18916C04009ED308 /* FloatingAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingAnnotationView.m; sourceTree = "<group>"; };
 		EA90ACEF18916C76009ED308 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EA90ACF118916F22009ED308 /* LiftedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiftedAnnotation.h; sourceTree = "<group>"; };
 		EA90ACF218916F22009ED308 /* LiftedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiftedAnnotation.m; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 				EA90ACCF189169BF009ED308 /* Images.xcassets */,
 				EA90ACF118916F22009ED308 /* LiftedAnnotation.h */,
 				EA90ACF218916F22009ED308 /* LiftedAnnotation.m */,
-				EA90ACEC18916C04009ED308 /* LiftingAnnotationView.h */,
-				EA90ACED18916C04009ED308 /* LiftingAnnotationView.m */,
+				EA90ACEC18916C04009ED308 /* FloatingAnnotationView.h */,
+				EA90ACED18916C04009ED308 /* FloatingAnnotationView.m */,
 				EA90ACC9189169BF009ED308 /* Main.storyboard */,
 				EA90ACBE189169BF009ED308 /* Supporting Files */,
 				EA90ACCC189169BF009ED308 /* ViewController.h */,
@@ -265,7 +265,7 @@
 			files = (
 				EA90ACF318916F22009ED308 /* LiftedAnnotation.m in Sources */,
 				EA90ACCE189169BF009ED308 /* ViewController.m in Sources */,
-				EA90ACEE18916C04009ED308 /* LiftingAnnotationView.m in Sources */,
+				EA90ACEE18916C04009ED308 /* FloatingAnnotationView.m in Sources */,
 				EA90ACC8189169BF009ED308 /* AppDelegate.m in Sources */,
 				EA90ACC4189169BF009ED308 /* main.m in Sources */,
 			);
