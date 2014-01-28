@@ -14,24 +14,49 @@
  * limitations under the License.
  */
 
+#import <MapKit/MapKit.h>
 #import "ViewController.h"
+#import "LiftedAnnotation.h"
+#import "LiftingAnnotationView.h"
 
-@interface ViewController ()
+@interface ViewController () <MKMapViewDelegate>
+
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    CLLocationCoordinate2D london = CLLocationCoordinate2DMake(51.507222, -0.1275);
+    [self.mapView setCenterCoordinate:london animated:YES];
+
+    LiftedAnnotation *annotation = [[LiftedAnnotation alloc] init];
+    [annotation setCoordinate:london];
+    [self.mapView addAnnotation:annotation];
+}
+
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    LiftingAnnotationView *annotationView = (LiftingAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:@"identifier"];
+    if (!annotationView) {
+        UIImage *pin = [UIImage imageNamed:@"Pin"];
+        annotationView = [[LiftingAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"identifier" image:pin];
+    }
+
+    return annotationView;
 }
 
 @end

@@ -21,6 +21,9 @@
 		EA90ACD9189169BF009ED308 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA90ACBB189169BF009ED308 /* UIKit.framework */; };
 		EA90ACE1189169BF009ED308 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA90ACDF189169BF009ED308 /* InfoPlist.strings */; };
 		EA90ACE3189169BF009ED308 /* LifterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90ACE2189169BF009ED308 /* LifterTests.m */; };
+		EA90ACEE18916C04009ED308 /* LiftingAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90ACED18916C04009ED308 /* LiftingAnnotationView.m */; };
+		EA90ACF018916C76009ED308 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA90ACEF18916C76009ED308 /* MapKit.framework */; };
+		EA90ACF318916F22009ED308 /* LiftedAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA90ACF218916F22009ED308 /* LiftedAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		EA90ACDE189169BF009ED308 /* LifterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LifterTests-Info.plist"; sourceTree = "<group>"; };
 		EA90ACE0189169BF009ED308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA90ACE2189169BF009ED308 /* LifterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifterTests.m; sourceTree = "<group>"; };
+		EA90ACEC18916C04009ED308 /* LiftingAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiftingAnnotationView.h; sourceTree = "<group>"; };
+		EA90ACED18916C04009ED308 /* LiftingAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiftingAnnotationView.m; sourceTree = "<group>"; };
+		EA90ACEF18916C76009ED308 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EA90ACF118916F22009ED308 /* LiftedAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiftedAnnotation.h; sourceTree = "<group>"; };
+		EA90ACF218916F22009ED308 /* LiftedAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiftedAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA90ACF018916C76009ED308 /* MapKit.framework in Frameworks */,
 				EA90ACBA189169BF009ED308 /* CoreGraphics.framework in Frameworks */,
 				EA90ACBC189169BF009ED308 /* UIKit.framework in Frameworks */,
 				EA90ACB8189169BF009ED308 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,7 @@
 		EA90ACB6189169BF009ED308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA90ACEF18916C76009ED308 /* MapKit.framework */,
 				EA90ACB7189169BF009ED308 /* Foundation.framework */,
 				EA90ACB9189169BF009ED308 /* CoreGraphics.framework */,
 				EA90ACBB189169BF009ED308 /* UIKit.framework */,
@@ -114,11 +124,15 @@
 			children = (
 				EA90ACC6189169BF009ED308 /* AppDelegate.h */,
 				EA90ACC7189169BF009ED308 /* AppDelegate.m */,
+				EA90ACCF189169BF009ED308 /* Images.xcassets */,
+				EA90ACF118916F22009ED308 /* LiftedAnnotation.h */,
+				EA90ACF218916F22009ED308 /* LiftedAnnotation.m */,
+				EA90ACEC18916C04009ED308 /* LiftingAnnotationView.h */,
+				EA90ACED18916C04009ED308 /* LiftingAnnotationView.m */,
 				EA90ACC9189169BF009ED308 /* Main.storyboard */,
+				EA90ACBE189169BF009ED308 /* Supporting Files */,
 				EA90ACCC189169BF009ED308 /* ViewController.h */,
 				EA90ACCD189169BF009ED308 /* ViewController.m */,
-				EA90ACCF189169BF009ED308 /* Images.xcassets */,
-				EA90ACBE189169BF009ED308 /* Supporting Files */,
 			);
 			path = Lifter;
 			sourceTree = "<group>";
@@ -249,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA90ACF318916F22009ED308 /* LiftedAnnotation.m in Sources */,
 				EA90ACCE189169BF009ED308 /* ViewController.m in Sources */,
+				EA90ACEE18916C04009ED308 /* LiftingAnnotationView.m in Sources */,
 				EA90ACC8189169BF009ED308 /* AppDelegate.m in Sources */,
 				EA90ACC4189169BF009ED308 /* main.m in Sources */,
 			);
@@ -460,6 +476,7 @@
 				EA90ACE8189169BF009ED308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA90ACE9189169BF009ED308 /* Build configuration list for PBXNativeTarget "LifterTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +485,7 @@
 				EA90ACEB189169BF009ED308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
